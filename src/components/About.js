@@ -24,13 +24,13 @@ const About = () => {
 						</Pr>
 						<Pr>
 							I love learning new things and employing my skills to help people.
-							Currently, I am discovering new technologies and building passion
+							Currently, I am learning new technologies and building passion
 							projects. 👩‍💻
 						</Pr>
 					</div>
 				</Div>
 				<Div>
-					<Img src="../.././assets/lara.jpg" alt="portrait" />
+					<Img src="../.././assets/lara3.png" alt="portrait" />
 				</Div>
 			</Main>
 		</Wrapper>

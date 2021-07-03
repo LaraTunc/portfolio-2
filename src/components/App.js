@@ -5,6 +5,7 @@ import GlobalStyles from './GlobalStyles';
 import Navbar from './Navbar';
 import Home from './Home';
 import Projects from './Projects';
+import Contact from './Contact';
 
 import { colors } from '../assets/assets';
 
@@ -21,6 +22,9 @@ const App = () => {
 					</Route>
 					<Route path="/projects">
 						<Projects />
+					</Route>
+					<Route path="/contact">
+						<Contact />
 					</Route>
 				</Switch>
 			</BrowserRouter>

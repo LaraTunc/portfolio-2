@@ -8,7 +8,7 @@ const Navbar = () => {
 			<StyledLink to="/">home</StyledLink>
 			<StyledLink to="/">about</StyledLink>
 			<StyledLink to="/projects">projects</StyledLink>
-			<StyledLink to="/">contact</StyledLink>
+			<StyledLink to="/contact">contact</StyledLink>
 		</Wrapper>
 	);
 };

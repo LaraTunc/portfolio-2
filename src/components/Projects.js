@@ -1,41 +1,32 @@
 import React from 'react';
 import styled from 'styled-components';
+import ProjectItem from './ProjectItem';
 
 const Projects = () => {
 	return (
 		<Wrapper>
-			<Project>
-				<Img
-					src="https://live.staticflickr.com/65535/51284110094_bad8d56067_k.jpg"
-					alt="E-cards website"
-				/>
-				<Description>
-					I created this app as my final project for the bootcamp. <br />
-					The idea struck me as I was looking for birthday e-cards for my friend
-					and was not able to find any free options. Given this, I set out to
-					build it myself. <br />
-					It gave me great joy to be able to build something for myself and my
-					friends. <br />
-					It is a full stack app deployed on Netlify. The app allows the user to
-					send e-cards via email to selected recipients.
-					<div>
-						Technologies used: Create react app, React.js, Node.js, Express,
-						Nodemailer, MongoDB
-					</div>
-				</Description>
-			</Project>
-			<Project>
-				<Img
-					src="https://live.staticflickr.com/65535/51284466540_73c8164275_k.jpg"
-					alt="Game website"
-				/>
-				<Description>
-					This is a game similar to space invaders. <br />
-					It is themed after Dua Lipa's Levitating music video 🔮. It was
-					created to be submitted as my 1st project for my bootcamp. <br />
-					<div>Technologies used: OOP, Javascript, DOM</div>
-				</Description>
-			</Project>
+			<ProjectItem
+				imgSrc={
+					'https://live.staticflickr.com/65535/51284110094_bad8d56067_k.jpg'
+				}
+				imgAlt={'E-cards website'}
+				description={
+					'I created this app as my final project for the bootcamp. The idea struck me as I was looking for birthday e-cards for my friend and was not able to find any free options. Given this, I set out to build it myself. It gave me great joy to be able to build something for myself and my friends. It is a full stack app deployed on Netlify. The app allows the user to send e-cards via email to selected recipients.'
+				}
+				stack={
+					'Create react app, React.js, Node.js, Express, Nodemailer, MongoDB, Rest API'
+				}
+			/>
+			<ProjectItem
+				imgSrc={
+					'https://live.staticflickr.com/65535/51284466540_73c8164275_k.jpg'
+				}
+				imgAlt={'Game website'}
+				description={
+					"This is a game similar to space invaders. The player can evade enemy disco balls and try to catch diamonds for life. The difficulty level increases with time. It is themed after Dua Lipa's Levitating music video 🔮. I decided to design after Dua's after being obsessed with both the song and the video of it for a while. It was created to be submitted as my 1st project for my bootcamp which I had a great time working on."
+				}
+				stack={'OOP, Javascript, DOM'}
+			/>
 		</Wrapper>
 	);
 };
@@ -43,7 +34,7 @@ const Projects = () => {
 export default Projects;
 
 const Wrapper = styled.div`
-	padding-top: 10%;
+	padding-top: 5%;
 	z-index: 5;
 	min-height: 100vh;
 	width: 100%;
@@ -54,21 +45,27 @@ const Wrapper = styled.div`
 
 const Project = styled.div`
 	width: 80%;
-	margin: 20px;
-	padding: 40px;
+	margin: 10%;
 	display: flex;
 `;
 
+const ImgWrapper = styled.div`
+	flex: 1;
+`;
+
 const Img = styled.img`
-	max-width: 40%;
+	max-width: 100%;
 	height: auto;
+	max-width: 100%;
 `;
 
 const Description = styled.div`
-	padding: 20px;
-	padding-left: 50px;
-	div {
-		margin-top: 20px;
-		font-weight: bolder;
-	}
+	flex: 1;
+	padding: 10px;
+	padding-left: 30px;
+`;
+
+const Stack = styled.div`
+	margin-top: 20px;
+	font-weight: bolder;
 `;
