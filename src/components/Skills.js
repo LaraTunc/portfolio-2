@@ -10,6 +10,7 @@ import { SiRedux } from 'react-icons/si';
 import { DiNodejsSmall } from 'react-icons/di';
 import { DiMongodb } from 'react-icons/di';
 import { SiFirebase } from 'react-icons/si';
+import Fade from 'react-reveal/Fade';
 
 const Skills = () => {
 	const skillsObj = {
@@ -48,28 +49,30 @@ const Skills = () => {
 	};
 
 	return (
-		<Wrapper>
+		<Box>
 			<Title>languages</Title>
-			<Skillswrapper>
-				{Object.values(skillsObj).map((skill) => (
-					<Skill key={skill.name} name={skill.name} icon={skill.icon} />
-				))}
-			</Skillswrapper>
+			<Fade bottom>
+				<Skillswrapper>
+					{Object.values(skillsObj).map((skill) => (
+						<Skill key={skill.name} name={skill.name} icon={skill.icon} />
+					))}
+				</Skillswrapper>
+			</Fade>
 			<Title>transferable skills</Title>
 			<Skillswrapper>
 				Self-starter, solution-oriented, analytical thinking, communication,
 				collaboration, open-minded, enthusiastic
 			</Skillswrapper>
-		</Wrapper>
+		</Box>
 	);
 };
 
 export default Skills;
 
-const Wrapper = styled.div`
+const Box = styled.div`
 	margin: 50px;
-	width: 50%;
 	z-index: 5;
+	width: 50%;
 	border: 1px solid ${colors.PRIMARY};
 	padding: 20px;
 	display: flex;

@@ -4,28 +4,33 @@ import { colors } from '../assets/assets';
 import { AiOutlineMail } from 'react-icons/ai';
 import { AiOutlineLinkedin } from 'react-icons/ai';
 import { AiFillGithub } from 'react-icons/ai';
+import Fade from 'react-reveal/Fade';
 
 const Contact = () => {
 	return (
 		<Wrapper>
-			<Anchor href="mailto:laratunc@gmail.com">
-				<Item>
-					<Name>email</Name>
-					<AiOutlineMail size={30} />
-				</Item>
-			</Anchor>
-			<Anchor href="https://www.linkedin.com/in/laratunc/">
-				<Item>
-					<Name>linkedIn</Name>
-					<AiOutlineLinkedin size={30} />
-				</Item>
-			</Anchor>
-			<Anchor href="https://github.com/LaraTunc">
-				<Item>
-					<Name>github</Name>
-					<AiFillGithub size={30} />
-				</Item>
-			</Anchor>
+			<Fade>
+				<Main>
+					<Anchor href="mailto:laratunc@gmail.com">
+						<Item>
+							<Name>email</Name>
+							<AiOutlineMail size={30} />
+						</Item>
+					</Anchor>
+					<Anchor href="https://www.linkedin.com/in/laratunc/">
+						<Item>
+							<Name>linkedIn</Name>
+							<AiOutlineLinkedin size={30} />
+						</Item>
+					</Anchor>
+					<Anchor href="https://github.com/LaraTunc">
+						<Item>
+							<Name>github</Name>
+							<AiFillGithub size={30} />
+						</Item>
+					</Anchor>
+				</Main>
+			</Fade>
 		</Wrapper>
 	);
 };
@@ -37,6 +42,11 @@ const Wrapper = styled.div`
 	width: 100%;
 	height: 100vh;
 	z-index: 5;
+`;
+
+const Main = styled.div`
+	width: 100%;
+	height: 100vh;
 	padding-top: 5%;
 	display: flex;
 	flex-direction: column;

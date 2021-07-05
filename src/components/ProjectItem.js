@@ -1,13 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import { font } from '../assets/assets';
 
-const ProjectItem = ({ imgSrc, imgAlt, description, stack }) => {
+const ProjectItem = ({ href, imgSrc, imgAlt, title, description, stack }) => {
 	return (
 		<Wrapper>
 			<ImgWrapper>
-				<Img src={imgSrc} alt={imgAlt} />
+				<a href={href} target="_blank">
+					<Img src={imgSrc} alt={imgAlt} />
+				</a>
 			</ImgWrapper>
 			<Description>
+				<Title>{title}</Title>
 				{description}
 				<Stack>Technologies: {stack}</Stack>
 			</Description>
@@ -24,7 +28,7 @@ const Wrapper = styled.div`
 `;
 
 const ImgWrapper = styled.div`
-	flex: 1;
+	flex: 3;
 `;
 
 const Img = styled.img`
@@ -34,9 +38,13 @@ const Img = styled.img`
 `;
 
 const Description = styled.div`
-	flex: 1;
+	flex: 2;
 	padding: 10px;
 	padding-left: 30px;
+`;
+
+const Title = styled.p`
+	font-size: ${font.TITLE_FONT_SIZE};
 `;
 
 const Stack = styled.div`
