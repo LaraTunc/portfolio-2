@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import GlobalStyles from './GlobalStyles';
@@ -10,15 +10,17 @@ import Contact from './Contact';
 import { colors } from '../assets/assets';
 
 const App = () => {
+	const aboutRef = useRef();
+
 	return (
 		<Wrapper>
 			<Filter />
 			<BrowserRouter>
 				<GlobalStyles />
-				<Navbar />
+				<Navbar aboutRef={aboutRef} />
 				<Switch>
 					<Route exact path="/">
-						<Home />
+						<Home aboutRef={aboutRef} />
 					</Route>
 					<Route path="/projects">
 						<Projects />

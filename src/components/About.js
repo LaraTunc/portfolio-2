@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { colors, font } from '../assets/assets';
 import Fade from 'react-reveal/Fade';
 
-const About = () => {
+const About = ({ aboutRef }) => {
 	return (
-		<Wrapper>
+		<Wrapper ref={aboutRef}>
 			<Main>
 				<Div>
 					<Fade bottom>
@@ -32,9 +32,9 @@ const About = () => {
 						</div>
 					</Fade>
 				</Div>
-				<Div>
+				<ImgWrapper>
 					<Img src="../.././assets/lara3.png" alt="portrait" />
-				</Div>
+				</ImgWrapper>
 			</Main>
 		</Wrapper>
 	);
@@ -44,7 +44,7 @@ export default About;
 
 const Wrapper = styled.div`
 	width: 100%;
-	padding: 40px 0px;
+	padding: 70px 0px;
 	background: ${colors.BACKGROUND};
 	z-index: 5;
 	display: flex;
@@ -52,13 +52,13 @@ const Wrapper = styled.div`
 `;
 
 const Main = styled.div`
-	width: 73%;
+	width: 70%;
 	padding: 20px;
 	display: flex;
 `;
 
 const Div = styled.div`
-	flex: 1;
+	flex: 3;
 	display: flex;
 	justify-content: center;
 `;
@@ -75,8 +75,15 @@ const Pr = styled.div`
 	padding: 10px;
 `;
 
+const ImgWrapper = styled.div`
+	flex: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`;
+
 const Img = styled.img`
-	max-width: 80%;
+	width: 80%;
 	max-height: 370px;
 	object-fit: cover;
 	margin-right: auto;

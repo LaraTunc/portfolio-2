@@ -15,6 +15,12 @@ const Landing = () => {
 
 export default Landing;
 
+const Wrapper = styled.div`
+	width: 100%;
+	height: 100vh;
+	position: relative;
+`;
+
 const blinking = keyframes`
 from { border-color: transparent }
 to { border-color: transparent }
@@ -26,12 +32,6 @@ from { width: 0 }
   to { width: 100% }
 `;
 
-const Wrapper = styled.div`
-	width: 100%;
-	height: 100vh;
-	position: relative;
-`;
-
 const Name = styled.p`
 	color: ${colors.PRIMARY};
 	font-size: 60px;
@@ -39,7 +39,6 @@ const Name = styled.p`
 	overflow: hidden;
 	border-right: 0.15em solid ${colors.PRIMARY};
 	white-space: nowrap;
-	margin: 0 auto;
 	animation: ${typing} 3.5s steps(40, end), ${blinking} 0.75s step-end infinite;
 `;
 

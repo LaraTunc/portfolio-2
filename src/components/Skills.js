@@ -71,6 +71,7 @@ export default Skills;
 
 const Box = styled.div`
 	margin: 50px;
+	margin-top: 10%;
 	z-index: 5;
 	width: 50%;
 	border: 1px solid ${colors.PRIMARY};

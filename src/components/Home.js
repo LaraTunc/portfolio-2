@@ -3,11 +3,11 @@ import About from './About';
 import Landing from './Landing';
 import Skills from './Skills';
 
-const Home = () => {
+const Home = ({ aboutRef }) => {
 	return (
 		<>
 			<Landing />
-			<About />
+			<About aboutRef={aboutRef} />
 			<Skills />
 		</>
 	);

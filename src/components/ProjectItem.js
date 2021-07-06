@@ -6,7 +6,7 @@ const ProjectItem = ({ href, imgSrc, imgAlt, title, description, stack }) => {
 	return (
 		<Wrapper>
 			<ImgWrapper>
-				<a href={href} target="_blank">
+				<a href={href} target="_blank" rel="noreferrer">
 					<Img src={imgSrc} alt={imgAlt} />
 				</a>
 			</ImgWrapper>

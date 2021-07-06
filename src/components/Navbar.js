@@ -2,11 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({ aboutRef }) => {
 	return (
 		<Wrapper>
 			<StyledLink to="/">home</StyledLink>
-			<StyledLink to="/">about</StyledLink>
+			<Div
+				onClick={() => {
+					window.scrollTo({
+						behavior: 'smooth',
+						top: aboutRef.current.offsetTop,
+					});
+				}}
+			>
+				about
+			</Div>
 			<StyledLink to="/projects">projects</StyledLink>
 			<StyledLink to="/contact">contact</StyledLink>
 		</Wrapper>
@@ -28,6 +37,13 @@ const Wrapper = styled.div`
 const StyledLink = styled(NavLink)`
 	text-decoration: none;
 	color: white;
+	margin: 10px 20px;
+	&:hover {
+		border-bottom: 1px solid white;
+	}
+`;
+
+const Div = styled.div`
 	margin: 10px 20px;
 	&:hover {
 		border-bottom: 1px solid white;
