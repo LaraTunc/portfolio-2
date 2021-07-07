@@ -22,7 +22,7 @@ const About = ({ aboutRef }) => {
 								I started dabbling in code trying to find smarter solutions to a
 								manual, repetitive processes. As my passion evolved, I started
 								playing with Python and C++. Soon after, I signed up for a
-								bootcamp to become a web dev.
+								bootcamp to become a web developer.
 							</Pr>
 							<Pr>
 								I love learning new things and employing my skills to help

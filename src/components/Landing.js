@@ -24,7 +24,7 @@ const Wrapper = styled.div`
 const blinking = keyframes`
 from { border-color: transparent }
 to { border-color: transparent }
-  50% { border-color: orange; }
+  50% { border-color: ${colors.PRIMARY}; }
 `;
 
 const typing = keyframes`
@@ -37,7 +37,7 @@ const Name = styled.p`
 	font-size: 60px;
 	margin-bottom: 15px;
 	overflow: hidden;
-	border-right: 0.15em solid ${colors.PRIMARY};
+	border-right: 0.1em solid ${colors.PRIMARY};
 	white-space: nowrap;
 	animation: ${typing} 3.5s steps(40, end), ${blinking} 0.75s step-end infinite;
 `;
